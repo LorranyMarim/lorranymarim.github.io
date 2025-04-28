@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Super Ranking Senai</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
+
+    <style>
+        /* ---------- Fundo em degradê até o fim da página ---------- */
+        html,
+        body {
+            height: 100%;
+        }
+
+        body.gradient-custom-2 {
+            background: #3d28a4;
+            /* fallback */
+            background: -webkit-linear-gradient(90deg,
+                    #3d28a4 0%,
+                    #339ef1 100%);
+            /* Safari/Chrome */
+            background: linear-gradient(90deg,
+                    #3d28a4 0%,
+                    #339ef1 100%);
+            /* padrão */
+            min-height: 100%;
+        }
+
+        /* ---------- Card translucido ---------- */
+        .mask-custom {
+            background: rgba(24, 24, 16, 0.2);
+            border-radius: 2em;
+            backdrop-filter: blur(25px);
+            border: 2px solid rgba(255, 255, 255, 0.05);
+            background-clip: padding-box;
+            box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+        }
+
+        /* ---------- Tabela ---------- */
+        .table,
+        .table thead,
+        .table tbody,
+        .table tr,
+        .table th,
+        .table td {
+            background-color: transparent !important;
+        }
+
+        .table thead th {
+            font-weight: 700;
+            font-size: 1.1rem;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .table th,
+        .table td {
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 1.05rem;
+            vertical-align: middle;
+        }
+
+        /* números centralizados */
+        .table td:nth-child(2),
+        .table thead th:nth-child(2) {
+            text-align: center;
+        }
+
+        /* linha clara entre usuários */
+        .table tbody tr {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* aumenta o ícone (avatar) dos usuários */
+        .table th img {
+            width: 60px;
+            height: auto;
+        }
+
+        /* frase “(dupla ou individual)” menor e mais clara */
+        .subtitle {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.75);
+            font-weight: 400;
+            margin-left: 4px;
+        }
+    </style>
+</head>
+
+<body class="gradient-custom-2">
+    <section class="py-5">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-12 col-xl-10">
+                    <div class="card mask-custom">
+                        <div class="card-body p-4">
+                            <div class="text-center pt-3 pb-2">
+                                <img src="img/coroa.png" alt="Coroa" width="60" />
+                                <h2 class="my-4 text-white fw-bold">Super Ranking Senai</h2>
+                            </div>
+
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">
+                                            Nome <span class="subtitle">(dupla ou individual)</span>
+                                        </th>
+                                        <th scope="col">Pontuação</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="fw-normal">
+                                        <th>
+                                            <img src="img/OSLO-1.png"
+                                                alt="avatar 1" style="width: 45px; height: auto;">
+                                            <span class="ms-2">Gabriel F. Silva</span>
+                                        </th>
+                                        <td class="align-middle">
+                                            <span>11640</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="fw-normal">
+                                        <th>
+                                            <img src="img/OSLO-3.png" alt="avatar 1" style="width: 45px; height: auto;">
+                                            <span class="ms-2">Marcos e Wendel</span>
+                                        </th>
+                                        <td class="align-middle">
+                                            <span>11260</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="fw-normal">
+                                        <th>
+                                            <img src="img/OSLO-4.png" alt="avatar 1" style="width: 45px; height: auto;">
+                                            <span class="ms-2">Adrian e Yan</span>
+                                        </th>
+                                        <td class="align-middle">
+                                            <span>10890</span>
+                                        </td>
+                                    </tr>
+                                <tr class="fw-normal">
+                                    <th>
+                                        <img src="img/OSLO-7.png" alt="avatar 1" style="width: 45px; height: auto;">
+                                        <span class="ms-2">Pedro H. e Hugo M.</span>
+                                    </th>
+                                    <td class="align-middle">
+                                        <span>10820</span>
+                                    </td>
+                                </tr>
+                                <tr class="fw-normal">
+                                    <th>
+                                        <img src="img/OSLO-7.png" alt="avatar 1" style="width: 45px; height: auto;">
+                                        <span class="ms-2">João Pedro</span>
+                                    </th>
+                                    <td class="align-middle">
+                                        <span>9960</span>
+                                    </td>
+                                </tr>
+                                <tr class="fw-normal">
+                                    <th>
+                                        <img src="img/OSLO-9.png" alt="avatar 1" style="width: 45px; height: auto;">
+                                        <span class="ms-2">Roberti Vitor</span>
+                                    </th>
+                                    <td class="align-middle">
+                                        <span>9900</span>
+                                    </td>
+                                </tr>
+                                <tr class="fw-normal">
+                                    <th>
+                                        <img src="img/OSLO-1.png" alt="avatar 1" style="width: 45px; height: auto;">
+                                        <span class="ms-2">Caio e André</span>
+                                    </th>
+                                    <td class="align-middle">
+                                        <span>9880</span>
+                                    </td>
+                                </tr>
+                                <tr class="fw-normal">
+                                    <th>
+                                        <img src="img/OSLO-3.png" alt="avatar 1" style="width: 45px; height: auto;">
+                                        <span class="ms-2">Robson Junior</span>
+                                    </th>
+                                    <td class="align-middle">
+                                        <span>9720</span>
+                                    </td>
+                                </tr>
+                                <tr class="fw-normal">
+                                    <th>
+                                        <img src="img/OSLO-2.png" alt="avatar 1" style="width: 45px; height: auto;">
+                                        <span class="ms-2">Vitória</span>
+                                    </th>
+                                    <td class="align-middle">
+                                        <span>9700</span>
+                                    </td>
+                                </tr>
+                                <tr class="fw-normal">
+                                    <th>
+                                        <img src="img/OSLO-4.png" alt="avatar 1" style="width: 45px; height: auto;">
+                                        <span class="ms-2">Marcos Vinicius</span>
+                                    </th>
+                                    <td class="align-middle">
+                                        <span>9530</span>
+                                    </td>
+                                </tr>
+                                <tr class="fw-normal">
+                                    <th>
+                                        <img src="img/OSLO-5.png" alt="avatar 1" style="width: 45px; height: auto;">
+                                        <span class="ms-2">Sara Vitória</span>
+                                    </th>
+                                    <td class="align-middle">
+                                        <span>9520</span>
+                                    </td>
+                                </tr>
+                                <tr class="fw-normal">
+                                    <th>
+                                        <img src="img/OSLO-7.png" alt="avatar 1" style="width: 45px; height: auto;">
+                                        <span class="ms-2">Gabriel Hastenreiter</span>
+                                    </th>
+                                    <td class="align-middle">
+                                        <span>9040</span>
+                                    </td>
+                                </tr>
+                                <tr class="fw-normal">
+                                    <th>
+                                        <img src="img/OSLO-9.png" alt="avatar 1" style="width: 45px; height: auto;">
+                                        <span class="ms-2">Italo Henrique</span>
+                                    </th>
+                                    <td class="align-middle">
+                                        <span>8860</span>
+                                    </td>
+                                </tr>
+                                <tr class="fw-normal">
+                                    <th>
+                                        <img src="img/OSLO-1.png" alt="avatar 1" style="width: 45px; height: auto;">
+                                        <span class="ms-2">Guilherme Paula</span>
+                                    </th>
+                                    <td class="align-middle">
+                                        <span>8380</span>
+                                    </td>
+                                </tr>
+                                <tr class="fw-normal">
+                                    <th>
+                                        <img src="img/OSLO-3.png" alt="avatar 1" style="width: 45px; height: auto;">
+                                        <span class="ms-2">Luiz Fernando</span>
+                                    </th>
+                                    <td class="align-middle">
+                                        <span>8060</span>
+                                    </td>
+                                </tr>
+                                <tr class="fw-normal">
+                                    <th>
+                                        <img src="img/OSLO-6.png" alt="avatar 1" style="width: 45px; height: auto;">
+                                        <span class="ms-2">Maria Matos</span>
+                                    </th>
+                                    <td class="align-middle">
+                                        <span>7490</span>
+                                    </td>
+                                </tr>
+                                <tr class="fw-normal">
+                                    <th>
+                                        <img src="img/OSLO-12.png" alt="avatar 1" style="width: 45px; height: auto;">
+                                        <span class="ms-2">Kelly Ramos</span>
+                                    </th>
+                                    <td class="align-middle">
+                                        <span>7000</span>
+                                    </td>
+                                </tr>
+                                <tr class="fw-normal">
+                                    <th>
+                                        <img src="img/OSLO-2.png" alt="avatar 1" style="width: 45px; height: auto;">
+                                        <span class="ms-2">Emylli e Isabela</span>
+                                    </th>
+                                    <td class="align-middle">
+                                        <span>6890</span>
+                                    </td>
+                                </tr>
+                                <tr class="fw-normal">
+                                    <th>
+                                        <img src="img/OSLO-5.png" alt="avatar 1" style="width: 45px; height: auto;">
+                                        <span class="ms-2">Ana Silva</span>
+                                    </th>
+                                    <td class="align-middle">
+                                        <span>6670</span>
+                                    </td>
+                                </tr>
+                                <tr class="fw-normal">
+                                    <th>
+                                        <img src="img/OSLO-3.png" alt="avatar 1" style="width: 45px; height: auto;">
+                                        <span class="ms-2">Kelvin</span>
+                                    </th>
+                                    <td class="align-middle">
+                                        <span>0</span>
+                                    </td>
+                                </tr>
+                            
+                                  
+                                </tbody>
+                            </table>
+    
+    
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
