@@ -7,13 +7,7 @@
     <title>Super Ranking Senai</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         crossorigin="anonymous" />
-
     <style>
-        html,
-        body {
-            height: 100%;
-        }
-
         body.gradient-custom-2 {
             background: linear-gradient(90deg, #3d28a4 0%, #339ef1 100%);
             min-height: 100%;
@@ -51,8 +45,8 @@
             vertical-align: middle;
         }
 
-        .table td:nth-child(2),
-        .table thead th:nth-child(2) {
+        .table td:nth-child(3),
+        .table thead th:nth-child(3) {
             text-align: center;
         }
 
@@ -77,6 +71,12 @@
             margin-left: 5px;
             color: #ccc;
         }
+
+        .top-rank {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: gold;
+        }
     </style>
 </head>
 
@@ -91,21 +91,24 @@
                                 <img src="img/coroa.png" alt="Coroa" width="60" />
                                 <h2 class="my-4 text-white fw-bold">Super Ranking Senai</h2>
                             </div>
-
                             <table class="table mb-0" id="rankingTable">
                                 <thead>
                                     <tr>
-                                        <th scope="col" onclick="sortTable(0)" style="cursor:pointer">
+                                        <th onclick="sortTable(-1)" style="cursor:pointer">
+                                            Classificação <span id="iconClassificacao" class="sort-icon">↕</span>
+                                        </th>
+                                        <th onclick="sortTable(0)" style="cursor:pointer">
                                             Nome <span class="subtitle">(dupla ou individual)</span> <span id="iconNome"
                                                 class="sort-icon">↕</span>
                                         </th>
-                                        <th scope="col" onclick="sortTable(1)" style="cursor:pointer">
+                                        <th onclick="sortTable(1)" style="cursor:pointer">
                                             Pontuação <span id="iconPontuacao" class="sort-icon">↕</span>
                                         </th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id="rankingBody">
                                     <tr class="fw-normal">
+                                        <td></td>
                                         <th>
                                             <img src="img/OSLO-1.png"
                                                 alt="avatar 1" style="width: 45px; height: auto;">
@@ -116,6 +119,7 @@
                                         </td>
                                     </tr>
                                     <tr class="fw-normal">
+                                        <td></td>
                                         <th>
                                             <img src="img/OSLO-3.png" alt="avatar 1" style="width: 45px; height: auto;">
                                             <span class="ms-2">Marcos A. Junior</span>
@@ -125,6 +129,7 @@
                                         </td>
                                     </tr>
                                     <tr class="fw-normal">
+                                        <td></td>
                                         <th>
                                             <img src="img/OSLO-3.png" alt="avatar 1" style="width: 45px; height: auto;">
                                             <span class="ms-2">Wendel R. Andrade</span>
@@ -134,6 +139,7 @@
                                         </td>
                                     </tr>
                                     <tr class="fw-normal">
+                                        <td></td>
                                         <th>
                                             <img src="img/OSLO-4.png" alt="avatar 1" style="width: 45px; height: auto;">
                                             <span class="ms-2">Adrian R. Garcia</span>
@@ -143,6 +149,7 @@
                                         </td>
                                     </tr>
                                     <tr class="fw-normal">
+                                        <td></td>
                                         <th>
                                             <img src="img/OSLO-4.png" alt="avatar 1" style="width: 45px; height: auto;">
                                             <span class="ms-2">Yan H. Pimenta</span>
@@ -152,6 +159,7 @@
                                         </td>
                                     </tr>
                                 <tr class="fw-normal">
+                                    <td></td>
                                     <th>
                                         <img src="img/OSLO-7.png" alt="avatar 1" style="width: 45px; height: auto;">
                                         <span class="ms-2">Pedro H. Oliveira</span>
@@ -161,6 +169,7 @@
                                     </td>
                                 </tr>
                                 <tr class="fw-normal">
+                                    <td></td>
                                     <th>
                                         <img src="img/OSLO-7.png" alt="avatar 1" style="width: 45px; height: auto;">
                                         <span class="ms-2">Hugo M. Alves</span>
@@ -170,6 +179,7 @@
                                     </td>
                                 </tr>
                                 <tr class="fw-normal">
+                                    <td></td>
                                     <th>
                                         <img src="img/OSLO-7.png" alt="avatar 1" style="width: 45px; height: auto;">
                                         <span class="ms-2">João P. Souza</span>
@@ -179,6 +189,7 @@
                                     </td>
                                 </tr>
                                 <tr class="fw-normal">
+                                    <td></td>
                                     <th>
                                         <img src="img/OSLO-9.png" alt="avatar 1" style="width: 45px; height: auto;">
                                         <span class="ms-2">Robert V. Laranjeira</span>
@@ -188,6 +199,7 @@
                                     </td>
                                 </tr>
                                 <tr class="fw-normal">
+                                    <td></td>
                                     <th>
                                         <img src="img/OSLO-1.png" alt="avatar 1" style="width: 45px; height: auto;">
                                         <span class="ms-2">Caio D. Valadares</span>
@@ -197,6 +209,7 @@
                                     </td>
                                 </tr>
                                 <tr class="fw-normal">
+                                    <td></td>
                                     <th>
                                         <img src="img/OSLO-1.png" alt="avatar 1" style="width: 45px; height: auto;">
                                         <span class="ms-2">André M. Souza</span>
@@ -206,6 +219,7 @@
                                     </td>
                                 </tr>
                                 <tr class="fw-normal">
+                                    <td></td>
                                     <th>
                                         <img src="img/OSLO-3.png" alt="avatar 1" style="width: 45px; height: auto;">
                                         <span class="ms-2">Robson R. Junior</span>
@@ -215,6 +229,7 @@
                                     </td>
                                 </tr>
                                 <tr class="fw-normal">
+                                    <td></td>
                                     <th>
                                         <img src="img/OSLO-2.png" alt="avatar 1" style="width: 45px; height: auto;">
                                         <span class="ms-2">Vitória S. Silva</span>
@@ -224,6 +239,7 @@
                                     </td>
                                 </tr>
                                 <tr class="fw-normal">
+                                    <td></td>
                                     <th>
                                         <img src="img/OSLO-4.png" alt="avatar 1" style="width: 45px; height: auto;">
                                         <span class="ms-2">Marcos V. Sales</span>
@@ -233,6 +249,7 @@
                                     </td>
                                 </tr>
                                 <tr class="fw-normal">
+                                    <td></td>
                                     <th>
                                         <img src="img/OSLO-5.png" alt="avatar 1" style="width: 45px; height: auto;">
                                         <span class="ms-2">Sara V. Rosa</span>
@@ -242,6 +259,7 @@
                                     </td>
                                 </tr>
                                 <tr class="fw-normal">
+                                    <td></td>
                                     <th>
                                         <img src="img/OSLO-5.png" alt="avatar 1" style="width: 45px; height: auto;">
                                         <span class="ms-2">Ingrid K. Pereira</span>
@@ -251,6 +269,7 @@
                                     </td>
                                 </tr>
                                 <tr class="fw-normal">
+                                    <td></td>
                                     <th>
                                         <img src="img/OSLO-7.png" alt="avatar 1" style="width: 45px; height: auto;">
                                         <span class="ms-2">Gabriel Hastenreiter</span>
@@ -260,6 +279,7 @@
                                     </td>
                                 </tr>
                                 <tr class="fw-normal">
+                                    <td></td>
                                     <th>
                                         <img src="img/OSLO-7.png" alt="avatar 1" style="width: 45px; height: auto;">
                                         <span class="ms-2">Willian G. Lima</span>
@@ -269,6 +289,7 @@
                                     </td>
                                 </tr>
                                 <tr class="fw-normal">
+                                    <td></td>
                                     <th>
                                         <img src="img/OSLO-9.png" alt="avatar 1" style="width: 45px; height: auto;">
                                         <span class="ms-2">Italo H. Bernardes</span>
@@ -278,6 +299,7 @@
                                     </td>
                                 </tr>
                                 <tr class="fw-normal">
+                                    <td></td>
                                     <th>
                                         <img src="img/OSLO-1.png" alt="avatar 1" style="width: 45px; height: auto;">
                                         <span class="ms-2">Guilherme F. Paula</span>
@@ -287,6 +309,7 @@
                                     </td>
                                 </tr>
                                 <tr class="fw-normal">
+                                    <td></td>
                                     <th>
                                         <img src="img/OSLO-1.png" alt="avatar 1" style="width: 45px; height: auto;">
                                         <span class="ms-2">Pietro F. Sales</span>
@@ -296,6 +319,7 @@
                                     </td>
                                 </tr>
                                 <tr class="fw-normal">
+                                    <td></td>
                                     <th>
                                         <img src="img/OSLO-3.png" alt="avatar 1" style="width: 45px; height: auto;">
                                         <span class="ms-2">Luiz F. Araujo</span>
@@ -305,6 +329,7 @@
                                     </td>
                                 </tr>
                                 <tr class="fw-normal">
+                                    <td></td>
                                     <th>
                                         <img src="img/OSLO-6.png" alt="avatar 1" style="width: 45px; height: auto;">
                                         <span class="ms-2">Maria L. Matos</span>
@@ -314,6 +339,7 @@
                                     </td>
                                 </tr>
                                 <tr class="fw-normal">
+                                    <td></td>
                                     <th>
                                         <img src="img/OSLO-6.png" alt="avatar 1" style="width: 45px; height: auto;">
                                         <span class="ms-2">Gabriel N. Rodrigues</span>
@@ -323,6 +349,7 @@
                                     </td>
                                 </tr>
                                 <tr class="fw-normal">
+                                    <td></td>
                                     <th>
                                         <img src="img/OSLO-12.png" alt="avatar 1" style="width: 45px; height: auto;">
                                         <span class="ms-2">Kelly C. Ramos</span>
@@ -332,6 +359,7 @@
                                     </td>
                                 </tr>
                                 <tr class="fw-normal">
+                                    <td></td>
                                     <th>
                                         <img src="img/OSLO-12.png" alt="avatar 1" style="width: 45px; height: auto;">
                                         <span class="ms-2">Juliana A. Oliveira</span>
@@ -341,6 +369,7 @@
                                     </td>
                                 </tr>
                                 <tr class="fw-normal">
+                                    <td></td>
                                     <th>
                                         <img src="img/OSLO-2.png" alt="avatar 1" style="width: 45px; height: auto;">
                                         <span class="ms-2">Emylli C. Rodrigues</span>
@@ -350,6 +379,7 @@
                                     </td>
                                 </tr>
                                 <tr class="fw-normal">
+                                    <td></td>
                                     <th>
                                         <img src="img/OSLO-2.png" alt="avatar 1" style="width: 45px; height: auto;">
                                         <span class="ms-2">Isabelle G. Dias</span>
@@ -359,6 +389,7 @@
                                     </td>
                                 </tr>
                                 <tr class="fw-normal">
+                                    <td></td>
                                     <th>
                                         <img src="img/OSLO-5.png" alt="avatar 1" style="width: 45px; height: auto;">
                                         <span class="ms-2">Ana C. Silva</span>
@@ -368,6 +399,7 @@
                                     </td>
                                 </tr>
                                 <tr class="fw-normal">
+                                    <td></td>
                                     <th>
                                         <img src="img/OSLO-3.png" alt="avatar 1" style="width: 45px; height: auto;">
                                         <span class="ms-2">Kelvin J. Aguiar</span>
@@ -389,9 +421,26 @@
             </div>
         </div>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-        crossorigin="anonymous"></script>
     <script>
+        function updateRanking() {
+            const tbody = document.getElementById("rankingBody");
+            const rows = Array.from(tbody.querySelectorAll("tr"));
+            rows.sort((a, b) => {
+                const scoreA = parseFloat(a.cells[2].innerText.replace(/\\./g, "").replace(",", ".")) || 0;
+                const scoreB = parseFloat(b.cells[2].innerText.replace(/\\./g, "").replace(",", ".")) || 0;
+                return scoreB - scoreA;
+            });
+            rows.forEach((row, index) => {
+                const rankCell = row.cells[0];
+                if (index === 0) {
+                    rankCell.innerHTML = '<span class="top-rank">1º 🎉</span>';
+                } else {
+                    rankCell.textContent = `${index + 1}º`;
+                }
+                tbody.appendChild(row);
+            });
+        }
+
         function sortTable(columnIndex) {
             const table = document.getElementById('rankingTable');
             const tbody = table.tBodies[0];
@@ -400,12 +449,19 @@
             const newDir = currentDir === 'asc' ? 'desc' : 'asc';
 
             rows.sort((rowA, rowB) => {
-                let cellA = rowA.cells[columnIndex].innerText.trim();
-                let cellB = rowB.cells[columnIndex].innerText.trim();
+                let cellA, cellB;
+                if (columnIndex === -1) {
+                    cellA = parseInt(rowA.cells[0].innerText) || 0;
+                    cellB = parseInt(rowB.cells[0].innerText) || 0;
+                } else if (columnIndex === 1) {
+                    cellA = parseFloat(rowA.cells[columnIndex + 1].innerText.replace(/\\./g, '').replace(',', '.')) || 0;
+                    cellB = parseFloat(rowB.cells[columnIndex + 1].innerText.replace(/\\./g, '').replace(',', '.')) || 0;
+                } else {
+                    cellA = rowA.cells[columnIndex + 1].innerText.trim();
+                    cellB = rowB.cells[columnIndex + 1].innerText.trim();
+                }
 
-                if (columnIndex === 1) {
-                    cellA = parseFloat(cellA.replace(/\./g, '').replace(',', '.')) || 0;
-                    cellB = parseFloat(cellB.replace(/\./g, '').replace(',', '.')) || 0;
+                if (typeof cellA === "number") {
                     return newDir === 'asc' ? cellA - cellB : cellB - cellA;
                 } else {
                     return newDir === 'asc' ? cellA.localeCompare(cellB) : cellB.localeCompare(cellA);
@@ -415,9 +471,12 @@
             rows.forEach(row => tbody.appendChild(row));
             table.setAttribute('data-sort-dir-' + columnIndex, newDir);
 
+            document.getElementById('iconClassificacao').textContent = columnIndex === -1 ? (newDir === 'asc' ? '↑' : '↓') : '↕';
             document.getElementById('iconNome').textContent = columnIndex === 0 ? (newDir === 'asc' ? '↑' : '↓') : '↕';
             document.getElementById('iconPontuacao').textContent = columnIndex === 1 ? (newDir === 'asc' ? '↑' : '↓') : '↕';
         }
+
+        window.onload = updateRanking;
     </script>
     </body>
     
